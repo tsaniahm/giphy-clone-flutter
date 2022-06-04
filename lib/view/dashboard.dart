@@ -29,7 +29,7 @@ class _DashboardState extends State<Dashboard> {
                 child: Text("TRENDING ON GIPHY", style: TextStyle(fontSize: 24, color: Colors.white),),
               ),
               FutureBuilder(
-                future: GiphyDataSource.instance.loadCountries(),
+                future: GiphyDataSource.instance.loadGiphy(),
                 builder: (
                     BuildContext context,
                     AsyncSnapshot<dynamic> snapshot,

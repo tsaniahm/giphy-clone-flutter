@@ -6,7 +6,6 @@ class BaseNetwork {
 
   static Future<Map<String, dynamic>> get() async {
     final response = await http.get(Uri.parse(baseUrl));
-    // debugPrint("BaseNetwork - response : ${response.body}");
     return _processResponse(response);
   }
 
