@@ -31,6 +31,10 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Image.asset('assets/images/icon.png'),
+            ),
             const Text('GIPHY',
               style: TextStyle(
                 color: Colors.white,
@@ -40,16 +44,13 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Image.asset('assets/images/icon.png'),
-            ),
-            Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: TextFormField(
                   controller: _usernameController,
                   decoration: const InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
+                    prefixIcon: const Icon(Icons.person),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                     hintText: "Username",
                   ),
@@ -68,6 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 decoration: const InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
+                  prefixIcon: const Icon(Icons.lock),
                   enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                   labelText: 'Password',
                 ),

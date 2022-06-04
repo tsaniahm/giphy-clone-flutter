@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_modul_5/helper/shared_preference.dart';
 import 'package:tugas_modul_5/network/giphy-data-source.dart';
 import 'package:tugas_modul_5/network/giphy-model.dart';
 import 'package:tugas_modul_5/view/detail_gif_page.dart';
-import 'package:tugas_modul_5/view/homepage.dart';
-import 'package:tugas_modul_5/view/search_page.dart';
 
 
 class Dashboard extends StatefulWidget {
@@ -96,31 +93,6 @@ class _DashboardState extends State<Dashboard> {
         );
       },
       itemCount: data.giphy?.length,
-    );
-  }
-
-  Widget _buildItemCountries(String value, String iso3, String image) {
-    return Container(
-      width: 300,
-      height: 300,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        color: Colors.black,
-        elevation: 10,
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.network('https://i.scdn.co/image/ab67616d00001e02b55d26c578e30129b0a7e86e', width: 200),
-              Text('Title : '+ value, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
-              Text('Rating : ' + iso3, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))
-            ],
-          ),
-        ),
-      ),
     );
   }
 }

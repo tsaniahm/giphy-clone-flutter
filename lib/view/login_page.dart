@@ -42,6 +42,10 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Image.asset('assets/images/icon.png'),
+              ),
               const Text('GIPHY',
                 style: TextStyle(
                   color: Colors.white,
@@ -52,15 +56,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
-                child: Image.asset('assets/images/icon.png'),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
                 child: TextFormField(
                   controller: _usernameController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
+                    prefixIcon: const Icon(Icons.person),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                     hintText: "Username",
                   ),
@@ -74,6 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
+                    prefixIcon: const Icon(Icons.lock),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                     hintText: "Password",
                   ),
